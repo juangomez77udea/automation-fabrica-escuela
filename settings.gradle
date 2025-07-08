@@ -1,0 +1,10 @@
+pluginManagement {
+    repositories {
+        /*mavenLocal()
+        gradlePluginPortal()*/
+
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+rootProject.name = 'FabricaEscuela'

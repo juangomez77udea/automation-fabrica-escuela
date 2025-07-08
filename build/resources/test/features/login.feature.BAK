@@ -1,0 +1,33 @@
+#language: es
+@login @smoke
+Feature: Autenticación de usuario
+
+  Como un usuario del sistema
+  Quiero poder iniciar sesión con mis credenciales
+  Para acceder a las funcionalidades correspondientes a mi perfil
+
+  Background:
+    Given que Juan quiere iniciar sesión en el sistema
+
+  Scenario: Inicio de sesión exitoso con credenciales válidas de un usuario registrado
+    Given que Juan se encuentra en la página de login
+    When él ingresa las credenciales válidas
+      | usuario                  | contrasena |
+      | juan.perez@citasalud.com | pass123    |
+    Then él debería ver la página principal de la aplicación
+
+  Scenario: Intento de inicio de sesión con una contraseña incorrecta
+    Given que Juan se encuentra en la página de login
+    When él ingresa una contraseña incorrecta para un usuario registrado
+      | usuario                  | contrasena        |
+      | juan.perez@citasalud.com | contrasenaErronea |
+    Then él debería ver un mensaje de error que dice "Login no válido"
+    And él debería permanecer en la página de login
+
+  Scenario: Intento de inicio de sesión con un usuario no existente
+    Given que Juan se encuentra en la página de login
+    When él ingresa credenciales de un usuario no registrado
+      | usuario                  | contrasena    |
+      | usuario.no.existe@mail.com | cualquierPass |
+    Then él debería ver un mensaje de error que dice "Login no válido"
+    And él debería permanecer en la página de login
