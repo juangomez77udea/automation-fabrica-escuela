@@ -15,3 +15,6 @@
 * Las interacciones y las clases nativas de `Serenity` como `Click`, `Enter` y `SelectFromOptions`. Representan la acción más básica y de bajo nivel. Es la interección direacta con un elemento de una     interfaz. Las interacciones utilizan un `Localizador` o `Target` con esto saben con que elemento de la página debe actuar.
 
 * El localizador actúa como un mapa o diccionario de la págia web. En este se definen dónde se encontrarán los elementos como boutones, campos de texto , etc. Acá se usan selectores como Xpath o css.
+
+  ![Diagrama sin título (1)](https://github.com/user-attachments/assets/c5a4fb2f-3899-4df3-b86b-599df5d428d2)
+
