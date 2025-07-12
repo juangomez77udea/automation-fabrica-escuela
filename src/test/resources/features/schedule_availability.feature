@@ -12,5 +12,4 @@ Feature: Doctor's Schedule Availability Management
     And he adds a new availability with the following data:
       | StartDate  | EndDate    | StartTime | EndTime |
       | 2025-08-01 | 2025-08-01 | 09:00     | 10:00   |
-    # ===== NUEVO Y CORREGIDO 'THEN' =====
     Then the new schedule should be visible in the table for "Carlos Santana"
