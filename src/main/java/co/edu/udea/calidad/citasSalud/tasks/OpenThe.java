@@ -9,20 +9,20 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class OpenThe implements Task {
 
-    private final PageObject page;
+    private final Class<? extends PageObject> pageClass;
 
-    public OpenThe(PageObject page) {
-        this.page = page;
+    public OpenThe(Class<? extends PageObject> pageClass) {
+        this.pageClass = pageClass;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Open.browserOn(this.page)
+                Open.browserOn().the(pageClass)
         );
     }
 
-    public static OpenThe browserOn(PageObject page) {
-        return instrumented(OpenThe.class, page);
+    public static OpenThe page(Class<? extends PageObject> pageClass) {
+        return instrumented(OpenThe.class, pageClass);
     }
 }

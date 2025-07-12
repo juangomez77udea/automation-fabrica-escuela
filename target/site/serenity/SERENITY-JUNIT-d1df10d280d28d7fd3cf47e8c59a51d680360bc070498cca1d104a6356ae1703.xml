@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Doctor's Schedule Availability Management" skipped="0" tests="1" time="0.36" timestamp="2025-07-08 09:50:28"><testcase name="Successfully add a new time slot for a doctor"><error message="Cannot invoke &quot;Object.getClass()&quot; because &quot;object&quot; is null" type="java.lang.NullPointerException">Cannot invoke "Object.getClass()" because "object" is null</error><system-err>Cannot invoke "Object.getClass()" because "object" is null
-co.edu.udea.calidad.citasSalud.tasks.AddSchedule.withTheData(AddSchedule.java:27)
-co.edu.udea.calidad.citasSalud.stepdefinitions.ScheduleAvailabilityStepDefinitions.heAddsANewAvailabilityWithTheFollowingData(ScheduleAvailabilityStepDefinitions.java:60)
-✽.he adds a new availability with the following data(file:///home/juancarlos/Documentos/Universidad/2025-1/Calidad_De_Software/Talleres/Taller_Automatizacion_FE/src/test/resources/features/schedule_availability.feature:19)
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Doctor's Schedule Availability Management" skipped="1" tests="1" time="0.01" timestamp="2025-07-11 07:30:18"><testcase name="Successfully add a new time slot for a doctor"><skipped/></testcase></testsuite>
