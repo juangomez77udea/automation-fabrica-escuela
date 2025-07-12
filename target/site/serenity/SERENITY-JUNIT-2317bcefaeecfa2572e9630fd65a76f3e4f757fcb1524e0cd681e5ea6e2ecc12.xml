@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="2" failures="0" name="User Authentication" skipped="0" tests="2" time="0.24" timestamp="2025-07-11 06:54:24"><testcase name="A registered user authenticates successfully"><error message="Cannot invoke &quot;Object.getClass()&quot; because &quot;object&quot; is null" type="java.lang.NullPointerException">Cannot invoke "Object.getClass()" because "object" is null</error><system-err>Cannot invoke "Object.getClass()" because "object" is null
+co.edu.udea.calidad.citasSalud.tasks.OpenThe.loginPage(OpenThe.java:25)
+co.edu.udea.calidad.citasSalud.stepdefinitions.AuthenticationStepDefinitions.aUserIsAtTheLoginPage(AuthenticationStepDefinitions.java:33)
+✽.a user is at the login page(file:///home/juancarlos/Documentos/Universidad/2025-1/Calidad_De_Software/Talleres/Taller_Automatizacion_FE/src/test/resources/features/authentication.feature:10)
+</system-err></testcase><testcase name="An user provides invalid credentials"><error message="Cannot invoke &quot;Object.getClass()&quot; because &quot;object&quot; is null" type="java.lang.NullPointerException">Cannot invoke "Object.getClass()" because "object" is null</error><system-err>Cannot invoke "Object.getClass()" because "object" is null
+co.edu.udea.calidad.citasSalud.tasks.OpenThe.loginPage(OpenThe.java:25)
+co.edu.udea.calidad.citasSalud.stepdefinitions.AuthenticationStepDefinitions.aUserIsAtTheLoginPage(AuthenticationStepDefinitions.java:33)
+✽.a user is at the login page(file:///home/juancarlos/Documentos/Universidad/2025-1/Calidad_De_Software/Talleres/Taller_Automatizacion_FE/src/test/resources/features/authentication.feature:10)
+</system-err></testcase></testsuite>

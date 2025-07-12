@@ -1,0 +1,391 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta charset="utf-8" data-next-head=""&gt;<br/>
+  &lt;meta name="viewport" content="width=device-width" data-next-head=""&gt;<br/>
+  &lt;noscript data-n-css=""&gt;&lt;/noscript&gt;<br/>
+  &lt;script defer nomodule="" src="/_next/static/chunks/polyfills.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/webpack.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/main.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/pages/_app.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/chunks/pages/login.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/development/_buildManifest.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/_next/static/development/_ssgManifest.js" defer&gt;&lt;/script&gt;<br/>
+  &lt;style&gt;/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */<br/>
+@layer properties;<br/>
+.visible {<br/>
+  visibility: visible;<br/>
+}<br/>
+.fixed {<br/>
+  position: fixed;<br/>
+}<br/>
+.relative {<br/>
+  position: relative;<br/>
+}<br/>
+.top-1\/2 {<br/>
+  top: calc(1/2 * 100%);<br/>
+}<br/>
+.left-1\/2 {<br/>
+  left: calc(1/2 * 100%);<br/>
+}<br/>
+.z-40 {<br/>
+  z-index: 40;<br/>
+}<br/>
+.z-50 {<br/>
+  z-index: 50;<br/>
+}<br/>
+.mx-auto {<br/>
+  margin-inline: auto;<br/>
+}<br/>
+.flex {<br/>
+  display: flex;<br/>
+}<br/>
+.grid {<br/>
+  display: grid;<br/>
+}<br/>
+.h-fit {<br/>
+  height: -moz-fit-content;<br/>
+  height: fit-content;<br/>
+}<br/>
+.min-h-screen {<br/>
+  min-height: 100vh;<br/>
+}<br/>
+.w-\[400px\] {<br/>
+  width: 400px;<br/>
+}<br/>
+.w-auto {<br/>
+  width: auto;<br/>
+}<br/>
+.w-full {<br/>
+  width: 100%;<br/>
+}<br/>
+.min-w-full {<br/>
+  min-width: 100%;<br/>
+}<br/>
+.flex-1 {<br/>
+  flex: 1;<br/>
+}<br/>
+.flex-shrink-0 {<br/>
+  flex-shrink: 0;<br/>
+}<br/>
+.flex-grow {<br/>
+  flex-grow: 1;<br/>
+}<br/>
+.-translate-x-1\/2 {<br/>
+  --tw-translate-x: calc(calc(1/2 * 100%) * -1);<br/>
+  translate: var(--tw-translate-x) var(--tw-translate-y);<br/>
+}<br/>
+.-translate-y-1\/2 {<br/>
+  --tw-translate-y: calc(calc(1/2 * 100%) * -1);<br/>
+  translate: var(--tw-translate-x) var(--tw-translate-y);<br/>
+}<br/>
+.resize-none {<br/>
+  resize: none;<br/>
+}<br/>
+.appearance-none {<br/>
+  -webkit-appearance: none;<br/>
+     -moz-appearance: none;<br/>
+          appearance: none;<br/>
+}<br/>
+.flex-col {<br/>
+  flex-direction: column;<br/>
+}<br/>
+.place-items-center {<br/>
+  place-items: center;<br/>
+}<br/>
+.items-center {<br/>
+  align-items: center;<br/>
+}<br/>
+.items-start {<br/>
+  align-items: flex-start;<br/>
+}<br/>
+.justify-between {<br/>
+  justify-content: space-between;<br/>
+}<br/>
+.justify-center {<br/>
+  justify-content: center;<br/>
+}<br/>
+.divide-y {<br/>
+  :where(& &gt; :not(:last-child)) {<br/>
+    --tw-divide-y-reverse: 0;<br/>
+    border-bottom-style: var(--tw-border-style);<br/>
+    border-top-style: var(--tw-border-style);<br/>
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));<br/>
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));<br/>
+  }<br/>
+}<br/>
+.overflow-x-auto {<br/>
+  overflow-x: auto;<br/>
+}<br/>
+.overflow-y-auto {<br/>
+  overflow-y: auto;<br/>
+}<br/>
+.rounded-full {<br/>
+  border-radius: calc(infinity * 1px);<br/>
+}<br/>
+.border {<br/>
+  border-style: var(--tw-border-style);<br/>
+  border-width: 1px;<br/>
+}<br/>
+.border-4 {<br/>
+  border-style: var(--tw-border-style);<br/>
+  border-width: 4px;<br/>
+}<br/>
+.border-l-4 {<br/>
+  border-left-style: var(--tw-border-style);<br/>
+  border-left-width: 4px;<br/>
+}<br/>
+.border-none {<br/>
+  --tw-border-style: none;<br/>
+  border-style: none;<br/>
+}<br/>
+.border-\[red\] {<br/>
+  border-color: red;<br/>
+}<br/>
+.bg-\[\#1A50D8\] {<br/>
+  background-color: #1A50D8;<br/>
+}<br/>
+.bg-\[\#1DD313\] {<br/>
+  background-color: #1DD313;<br/>
+}<br/>
+.bg-\[\#5E7FD3\] {<br/>
+  background-color: #5E7FD3;<br/>
+}<br/>
+.bg-\[\#D9DBE0\] {<br/>
+  background-color: #D9DBE0;<br/>
+}<br/>
+.bg-\[\#D95656\] {<br/>
+  background-color: #D95656;<br/>
+}<br/>
+.bg-\[white\] {<br/>
+  background-color: white;<br/>
+}<br/>
+.text-center {<br/>
+  text-align: center;<br/>
+}<br/>
+.text-left {<br/>
+  text-align: left;<br/>
+}<br/>
+.text-\[14px\] {<br/>
+  font-size: 14px;<br/>
+}<br/>
+.whitespace-nowrap {<br/>
+  white-space: nowrap;<br/>
+}<br/>
+.text-\[\#1A50D8\] {<br/>
+  color: #1A50D8;<br/>
+}<br/>
+.text-\[red\] {<br/>
+  color: red;<br/>
+}<br/>
+.uppercase {<br/>
+  text-transform: uppercase;<br/>
+}<br/>
+.opacity-80 {<br/>
+  opacity: 80%;<br/>
+}<br/>
+.transition {<br/>
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;<br/>
+  transition-timing-function: var(--tw-ease, ease);<br/>
+  transition-duration: var(--tw-duration, 0s);<br/>
+}<br/>
+.transition-colors {<br/>
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;<br/>
+  transition-timing-function: var(--tw-ease, ease);<br/>
+  transition-duration: var(--tw-duration, 0s);<br/>
+}<br/>
+.duration-200 {<br/>
+  --tw-duration: 200ms;<br/>
+  transition-duration: 200ms;<br/>
+}<br/>
+.hover\:bg-\[\#153a8d\] {<br/>
+  &:hover {<br/>
+    @media (hover: hover) {<br/>
+      background-color: #153a8d;<br/>
+    }<br/>
+  }<br/>
+}<br/>
+.hover\:underline {<br/>
+  &:hover {<br/>
+    @media (hover: hover) {<br/>
+      text-decoration-line: underline;<br/>
+    }<br/>
+  }<br/>
+}<br/>
+.focus\:ring-2 {<br/>
+  &:focus {<br/>
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);<br/>
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);<br/>
+  }<br/>
+}<br/>
+.focus\:ring-\[\#1A50D8\] {<br/>
+  &:focus {<br/>
+    --tw-ring-color: #1A50D8;<br/>
+  }<br/>
+}<br/>
+.focus\:outline-none {<br/>
+  &:focus {<br/>
+    --tw-outline-style: none;<br/>
+    outline-style: none;<br/>
+  }<br/>
+}<br/>
+.disabled\:cursor-not-allowed {<br/>
+  &:disabled {<br/>
+    cursor: not-allowed;<br/>
+  }<br/>
+}<br/>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');<br/>
+body {<br/>
+  font-family: 'Inter', sans-serif;<br/>
+  text-align: center;<br/>
+}<br/>
+@property --tw-translate-x {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0;<br/>
+}<br/>
+@property --tw-translate-y {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0;<br/>
+}<br/>
+@property --tw-translate-z {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0;<br/>
+}<br/>
+@property --tw-divide-y-reverse {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0;<br/>
+}<br/>
+@property --tw-border-style {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: solid;<br/>
+}<br/>
+@property --tw-duration {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+}<br/>
+@property --tw-shadow {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0 0 #0000;<br/>
+}<br/>
+@property --tw-shadow-color {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+}<br/>
+@property --tw-shadow-alpha {<br/>
+  syntax: "&lt;percentage&gt;";<br/>
+  inherits: false;<br/>
+  initial-value: 100%;<br/>
+}<br/>
+@property --tw-inset-shadow {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0 0 #0000;<br/>
+}<br/>
+@property --tw-inset-shadow-color {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+}<br/>
+@property --tw-inset-shadow-alpha {<br/>
+  syntax: "&lt;percentage&gt;";<br/>
+  inherits: false;<br/>
+  initial-value: 100%;<br/>
+}<br/>
+@property --tw-ring-color {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+}<br/>
+@property --tw-ring-shadow {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0 0 #0000;<br/>
+}<br/>
+@property --tw-inset-ring-color {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+}<br/>
+@property --tw-inset-ring-shadow {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0 0 #0000;<br/>
+}<br/>
+@property --tw-ring-inset {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+}<br/>
+@property --tw-ring-offset-width {<br/>
+  syntax: "&lt;length&gt;";<br/>
+  inherits: false;<br/>
+  initial-value: 0px;<br/>
+}<br/>
+@property --tw-ring-offset-color {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: #fff;<br/>
+}<br/>
+@property --tw-ring-offset-shadow {<br/>
+  syntax: "*";<br/>
+  inherits: false;<br/>
+  initial-value: 0 0 #0000;<br/>
+}<br/>
+@layer properties {<br/>
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {<br/>
+    *, ::before, ::after, ::backdrop {<br/>
+      --tw-translate-x: 0;<br/>
+      --tw-translate-y: 0;<br/>
+      --tw-translate-z: 0;<br/>
+      --tw-divide-y-reverse: 0;<br/>
+      --tw-border-style: solid;<br/>
+      --tw-duration: initial;<br/>
+      --tw-shadow: 0 0 #0000;<br/>
+      --tw-shadow-color: initial;<br/>
+      --tw-shadow-alpha: 100%;<br/>
+      --tw-inset-shadow: 0 0 #0000;<br/>
+      --tw-inset-shadow-color: initial;<br/>
+      --tw-inset-shadow-alpha: 100%;<br/>
+      --tw-ring-color: initial;<br/>
+      --tw-ring-shadow: 0 0 #0000;<br/>
+      --tw-inset-ring-color: initial;<br/>
+      --tw-inset-ring-shadow: 0 0 #0000;<br/>
+      --tw-ring-inset: initial;<br/>
+      --tw-ring-offset-width: 0px;<br/>
+      --tw-ring-offset-color: #fff;<br/>
+      --tw-ring-offset-shadow: 0 0 #0000;<br/>
+    }<br/>
+  }<br/>
+}<br/>
+<br/>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjxubyBzb3VyY2U+Iiwid2VicGFjazovL3N0eWxlcy9nbG9iYWxzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxrRUFBQTtBQ0VBLGlCQUFvQjtBQUFwQjtFQUFBLG1CQUFvQjtBQUFBO0FBQXBCO0VBQUEsZUFBb0I7QUFBQTtBQUFwQjtFQUFBLGtCQUFvQjtBQUFBO0FBQXBCO0VBQUEscUJBQW9CO0FBQUE7QUFBcEI7RUFBQSxzQkFBb0I7QUFBQTtBQUFwQjtFQUFBLFdBQW9CO0FBQUE7QUFBcEI7RUFBQSxXQUFvQjtBQUFBO0FBQXBCO0VBQUEsbUJBQW9CO0FBQUE7QUFBcEI7RUFBQSxhQUFvQjtBQUFBO0FBQXBCO0VBQUEsYUFBb0I7QUFBQTtBQUFwQjtFQUFBLHdCQUFvQjtFQUFwQixtQkFBb0I7QUFBQTtBQUFwQjtFQUFBLGlCQUFvQjtBQUFBO0FBQXBCO0VBQUEsWUFBb0I7QUFBQTtBQUFwQjtFQUFBLFdBQW9CO0FBQUE7QUFBcEI7RUFBQSxXQUFvQjtBQUFBO0FBQXBCO0VBQUEsZUFBb0I7QUFBQTtBQUFwQjtFQUFBLE9BQW9CO0FBQUE7QUFBcEI7RUFBQSxjQUFvQjtBQUFBO0FBQXBCO0VBQUEsWUFBb0I7QUFBQTtBQUFwQjtFQUFBLDZDQUFvQjtFQUFwQixzREFBb0I7QUFBQTtBQUFwQjtFQUFBLDZDQUFvQjtFQUFwQixzREFBb0I7QUFBQTtBQUFwQjtFQUFBLFlBQW9CO0FBQUE7QUFBcEI7RUFBQSx3QkFBb0I7S0FBcEIscUJBQW9CO1VBQXBCLGdCQUFvQjtBQUFBO0FBQXBCO0VBQUEsc0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxtQkFBb0I7QUFBQTtBQUFwQjtFQUFBLG1CQUFvQjtBQUFBO0FBQXBCO0VBQUEsdUJBQW9CO0FBQUE7QUFBcEI7RUFBQSw4QkFBb0I7QUFBQTtBQUFwQjtFQUFBLHVCQUFvQjtBQUFBO0FBQXBCO0VBQUE7SUFBQSx3QkFBb0I7SUFBcEIsMkNBQW9CO0lBQXBCLHdDQUFvQjtJQUFwQix3REFBb0I7SUFBcEIscUVBQW9CO0VBQUE7QUFBQTtBQUFwQjtFQUFBLGdCQUFvQjtBQUFBO0FBQXBCO0VBQUEsZ0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxtQ0FBb0I7QUFBQTtBQUFwQjtFQUFBLG9DQUFvQjtFQUFwQixpQkFBb0I7QUFBQTtBQUFwQjtFQUFBLG9DQUFvQjtFQUFwQixpQkFBb0I7QUFBQTtBQUFwQjtFQUFBLHlDQUFvQjtFQUFwQixzQkFBb0I7QUFBQTtBQUFwQjtFQUFBLHVCQUFvQjtFQUFwQixrQkFBb0I7QUFBQTtBQUFwQjtFQUFBLGlCQUFvQjtBQUFBO0FBQXBCO0VBQUEseUJBQW9CO0FBQUE7QUFBcEI7RUFBQSx5QkFBb0I7QUFBQTtBQUFwQjtFQUFBLHlCQUFvQjtBQUFBO0FBQXBCO0VBQUEseUJBQW9CO0FBQUE7QUFBcEI7RUFBQSx5QkFBb0I7QUFBQTtBQUFwQjtFQUFBLHVCQUFvQjtBQUFBO0FBQXBCO0VBQUEsa0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxnQkFBb0I7QUFBQTtBQUFwQjtFQUFBLGVBQW9CO0FBQUE7QUFBcEI7RUFBQSxtQkFBb0I7QUFBQTtBQUFwQjtFQUFBLGNBQW9CO0FBQUE7QUFBcEI7RUFBQSxVQUFvQjtBQUFBO0FBQXBCO0VBQUEseUJBQW9CO0FBQUE7QUFBcEI7RUFBQSxZQUFvQjtBQUFBO0FBQXBCO0VBQUEscVZBQW9CO0VBQXBCLGdEQUFvQjtFQUFwQiwyQ0FBb0I7QUFBQTtBQUFwQjtFQUFBLHVLQUFvQjtFQUFwQixnREFBb0I7RUFBcEIsMkNBQW9CO0FBQUE7QUFBcEI7RUFBQSxvQkFBb0I7RUFBcEIsMEJBQW9CO0FBQUE7QUFBcEI7RUFBQTtJQUFBO01BQUEseUJBQW9CO0lBQUE7RUFBQTtBQUFBO0FBQXBCO0VBQUE7SUFBQTtNQUFBLCtCQUFvQjtJQUFBO0VBQUE7QUFBQTtBQUFwQjtFQUFBO0lBQUEsd0hBQW9CO0lBQXBCLHNJQUFvQjtFQUFBO0FBQUE7QUFBcEI7RUFBQTtJQUFBLHdCQUFvQjtFQUFBO0FBQUE7QUFBcEI7RUFBQTtJQUFBLHdCQUFvQjtJQUFwQixtQkFBb0I7RUFBQTtBQUFBO0FBQXBCO0VBQUE7SUFBQSxtQkFBb0I7RUFBQTtBQUFBO0FBQ3BCLDJGQUE0RjtBQUU1RjtFQUNFLGdDQUFpQztFQUNqQyxrQkFBbUI7QUFDcEI7QUFORDtFQUFBLFdBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLGdCQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7RUFBcEIsZ0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxXQUFvQjtFQUFwQixlQUFvQjtFQUFwQixnQkFBb0I7QUFBQTtBQUFwQjtFQUFBLFdBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLGdCQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7RUFBcEIsb0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxXQUFvQjtFQUFwQixlQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7RUFBcEIsd0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxXQUFvQjtFQUFwQixlQUFvQjtBQUFBO0FBQXBCO0VBQUEsc0JBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLG1CQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7RUFBcEIsd0JBQW9CO0FBQUE7QUFBcEI7RUFBQSxXQUFvQjtFQUFwQixlQUFvQjtBQUFBO0FBQXBCO0VBQUEsc0JBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLG1CQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7QUFBQTtBQUFwQjtFQUFBLFdBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLHdCQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7QUFBQTtBQUFwQjtFQUFBLFdBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLHdCQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7QUFBQTtBQUFwQjtFQUFBLGtCQUFvQjtFQUFwQixlQUFvQjtFQUFwQixrQkFBb0I7QUFBQTtBQUFwQjtFQUFBLFdBQW9CO0VBQXBCLGVBQW9CO0VBQXBCLG1CQUFvQjtBQUFBO0FBQXBCO0VBQUEsV0FBb0I7RUFBcEIsZUFBb0I7RUFBcEIsd0JBQW9CO0FBQUE7QUFBcEI7RUFBQTtJQUFBO01BQUEsbUJBQW9CO01BQXBCLG1CQUFvQjtNQUFwQixtQkFBb0I7TUFBcEIsd0JBQW9CO01BQXBCLHdCQUFvQjtNQUFwQixzQkFBb0I7TUFBcEIsc0JBQW9CO01BQXBCLDBCQUFvQjtNQUFwQix1QkFBb0I7TUFBcEIsNEJBQW9CO01BQXBCLGdDQUFvQjtNQUFwQiw2QkFBb0I7TUFBcEIsd0JBQW9CO01BQXBCLDJCQUFvQjtNQUFwQiw4QkFBb0I7TUFBcEIsaUNBQW9CO01BQXBCLHdCQUFvQjtNQUFwQiwyQkFBb0I7TUFBcEIsNEJBQW9CO01BQXBCLGtDQUFvQjtJQUFBO0VBQUE7QUFBQSIsInNvdXJjZXNDb250ZW50IjpbbnVsbCwiQHRhaWx3aW5kIGJhc2U7XG5AdGFpbHdpbmQgY29tcG9uZW50cztcbkB0YWlsd2luZCB1dGlsaXRpZXM7XG5AaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1JbnRlcjp3Z2h0QDQwMDs2MDA7NzAwJmRpc3BsYXk9c3dhcCcpO1xuXG5ib2R5IHtcbiAgZm9udC1mYW1pbHk6ICdJbnRlcicsIHNhbnMtc2VyaWY7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */&lt;/style&gt;<br/>
+  &lt;noscript id="__next_css__DO_NOT_USE__"&gt;&lt;/noscript&gt;<br/>
+  &lt;style&gt;@font-face{font-family:'__nextjs-Geist';font-style:normal;font-weight:400 600;font-display:swap;src:url(/__nextjs_font/geist-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'__nextjs-Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url(/__nextjs_font/geist-mono-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'__nextjs-Geist';font-style:normal;font-weight:400 600;font-display:swap;src:url(/__nextjs_font/geist-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'__nextjs-Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url(/__nextjs_font/geist-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}&lt;/style&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body&gt;<br/>
+  &lt;div id="__next"&gt;<br/>
+   &lt;div class="relative min-h-screen flex flex-col items-center bg-[#D9DBE0] font-inter"&gt;<br/>
+    &lt;header class="w-full bg-[#5E7FD3] py-4 shadow-lg flex justify-center items-center"&gt;<br/>
+     &lt;h1 class="text-4xl font-extrabold tracking-wide text-white"&gt;CITA SALUD&lt;/h1&gt;<br/>
+    &lt;/header&gt;<br/>
+    &lt;div class="flex items-center justify-center flex-grow w-full px-4 py-8"&gt;<br/>
+     &lt;div class="p-8 bg-white rounded shadow-md w-80"&gt;<br/>
+      &lt;h2 class="mb-4 text-2xl font-semibold text-center"&gt;Iniciar sesión&lt;/h2&gt;<br/>
+      &lt;div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"&gt;<br/>
+       &lt;div class="bg-[white] border-4 border-[red] rounded-lg p-8 text-center w-[400px] shadow-lg"&gt;<br/>
+        &lt;h2 class="text-[red] font-bold text-xl mb-4"&gt;¡LOGIN NO VÁLIDO!&lt;/h2&gt;<br/>
+        &lt;p class="text-[red] mb-6"&gt;La información suministrada no corresponde con un usuario registrado en el sistema&lt;/p&gt;&lt;button class="bg-[#1DD313] text-white px-6 py-2 rounded hover:bg-green-700"&gt;Volver a intentar&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;&lt;input type="text" placeholder="Correo electrónico" class="w-full px-4 py-3 mb-2 border border-gray-300 rounded-xl" data-testid="email-input" value="pepo@mail.com"&gt;&lt;input type="password" placeholder="Contraseña" class="w-full px-4 py-3 mb-2 border border-gray-300 rounded-xl" data-testid="password-input" value="123456"&gt;&lt;button class="w-full bg-[#1DD313] text-white py-2 rounded hover:bg-blue-700" data-testid="login-button"&gt;Aceptar&lt;/button&gt;<br/>
+      &lt;p class="mt-2 text-sm text-center"&gt;¿No tienes cuenta? &lt;br&gt;&lt;a href="/registro" class="text-blue-600 hover:underline"&gt;Regístrate&lt;/a&gt;&lt;/p&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script src="/_next/static/chunks/react-refresh.js"&gt;&lt;/script&gt;<br/>
+  &lt;script id="__NEXT_DATA__" type="application/json"&gt;{"props":{"pageProps":{}},"page":"/login","query":{},"buildId":"development","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}&lt;/script&gt;&lt;next-route-announcer&gt;<br/>
+   &lt;p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;"&gt;&lt;/p&gt;<br/>
+  &lt;/next-route-announcer&gt;&lt;nextjs-portal&gt;&lt;/nextjs-portal&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
