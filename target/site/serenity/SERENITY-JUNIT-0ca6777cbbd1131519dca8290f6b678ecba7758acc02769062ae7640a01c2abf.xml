@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Role-based Access Control" skipped="0" tests="3" time="1.33" timestamp="2025-07-12 01:14:42"><testcase name="Verify visibility of schedule management options by role"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Role-based Access Control" skipped="0" tests="3" time="1.2" timestamp="2025-07-12 03:23:28"><testcase name="Verify visibility of schedule management options by role"/></testsuite>

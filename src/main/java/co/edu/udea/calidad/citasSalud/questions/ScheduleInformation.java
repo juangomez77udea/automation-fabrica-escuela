@@ -2,7 +2,6 @@ package co.edu.udea.calidad.citasSalud.questions;
 
 import co.edu.udea.calidad.citasSalud.userinterfaces.HorariosPage;
 import co.edu.udea.calidad.citasSalud.utils.TextNormalizer;
-import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.targets.Target;

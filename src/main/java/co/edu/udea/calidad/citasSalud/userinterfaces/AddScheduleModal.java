@@ -6,13 +6,9 @@ import org.openqa.selenium.By;
 public class AddScheduleModal {
     private AddScheduleModal() {}
 
-    // ===== LA CORRECCIÓN DEFINITIVA ESTÁ AQUÍ =====
-    // Buscamos un div que contenga el label "Fecha:". Esto identifica
-    // de forma única al modal de AGREGAR horario.
     public static final Target MODAL_CONTAINER = Target.the("contenedor del modal de agregar horario")
             .located(By.xpath("//div[contains(@class, 'fixed')]//label[text()='Fecha:']"));
 
-    // El resto de los localizadores de este archivo ya están correctos
     public static final Target START_DATE_INPUT = Target.the("campo fecha de inicio")
             .located(By.xpath("(//input[@type='date'])[1]"));
 

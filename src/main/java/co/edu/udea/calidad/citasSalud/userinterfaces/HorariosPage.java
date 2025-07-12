@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 public class HorariosPage {
     private HorariosPage() {}
 
-    // Localizadores más simples y robustos
     public static final Target SCHEDULE_TABLE = Target.the("tabla de horarios")
             .located(By.tagName("table"));
 
@@ -17,10 +16,8 @@ public class HorariosPage {
     public static final Target DOCTOR_ROWS = Target.the("filas de doctores")
             .located(By.cssSelector("tbody tr"));
 
-    // Localizador para la celda de acciones usando posición
     public static final Target ACTION_BUTTONS_CELL = Target.the("celda de acciones de la primera fila")
             .located(By.cssSelector("tbody tr:first-child td:last-child"));
-
 
     public static final Target ADD_SUCCESS_MESSAGE = Target.the("mensaje de éxito agregar franja")
             .located(By.xpath("//div[contains(text(), 'Franja horaria agregada exitosamente') or contains(text(), 'exitosamente')]"));

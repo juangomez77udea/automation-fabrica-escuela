@@ -22,20 +22,17 @@ public class EnterDate implements Interaction {
         this.dateField = dateField;
     }
 
-    // Método de fábrica para una sintaxis legible: EnterDate.of("2025-08-01").into(TARGET)
     public static EnterDate of(String date) {
         // Devuelve una instancia "parcialmente construida" que espera el target
         return new EnterDate(date, null);
     }
 
-    // Este método permite encadenar la llamada: ...of(date).into(target)
     public EnterDate into(Target dateField) {
         return instrumented(EnterDate.class, this.date, dateField);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        // La lógica para formatear la fecha se encapsula aquí.
         // Formato esperado por el input: DDMMYYYY
         String dateForSendKeys = date.substring(8, 10) + date.substring(5, 7) + date.substring(0, 4);
 

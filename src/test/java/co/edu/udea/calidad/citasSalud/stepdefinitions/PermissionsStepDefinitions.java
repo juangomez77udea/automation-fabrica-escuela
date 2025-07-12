@@ -1,6 +1,6 @@
 package co.edu.udea.calidad.citasSalud.stepdefinitions;
 
-import co.edu.udea.calidad.citasSalud.questions.TheLoginResult; // Importamos TheLoginResult
+import co.edu.udea.calidad.citasSalud.questions.TheLoginResult;
 import co.edu.udea.calidad.citasSalud.tasks.Authenticate;
 import co.edu.udea.calidad.citasSalud.tasks.OpenThe;
 import co.edu.udea.calidad.citasSalud.userinterfaces.HorariosPage;
@@ -12,6 +12,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.questions.Visibility;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 import static org.hamcrest.Matchers.is;
 
 public class PermissionsStepDefinitions {
@@ -36,20 +38,16 @@ public class PermissionsStepDefinitions {
         boolean shouldBeVisible = "should".equals(visibility);
 
         if (shouldBeVisible) {
-            // Para los usuarios autorizados, verificamos DOS COSAS:
-            // 1. Que llegaron a la página de horarios.
-            // 2. Que ven la columna de acciones.
+            // Para el rol autorizado, verificamos que el login fue exitoso Y que ve la columna
             OnStage.theActorInTheSpotlight().should(
                     seeThat(TheLoginResult.wasSuccessful(), is(true)),
                     seeThat(Visibility.of(HorariosPage.ACTIONS_COLUMN_HEADER), is(true))
             );
         } else {
-            // Para el usuario NO autorizado, verificamos DOS COSAS:
-            // 1. Que NO llegaron a la página de horarios.
-            // 2. Que, por lo tanto, NO ven la columna de acciones.
+            // Para el rol NO autorizado, verificamos que el login falló Y que sigue en la página de login.
             OnStage.theActorInTheSpotlight().should(
                     seeThat(TheLoginResult.wasSuccessful(), is(false)),
-                    seeThat(Visibility.of(HorariosPage.ACTIONS_COLUMN_HEADER), is(false))
+                    seeThat(the(LoginPage.LOGIN_BUTTON), isVisible()) // Esta es la verificación correcta
             );
         }
     }

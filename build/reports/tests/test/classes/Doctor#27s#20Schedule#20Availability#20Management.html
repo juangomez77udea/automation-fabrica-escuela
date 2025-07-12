@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.675s</div>
+<div class="counter">9.486s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -60,9 +60,6 @@
 </div>
 <div class="tab-container">
 <ul class="tabLinks">
-<li>
-<a href="#">Failed tests</a>
-</li>
 <li>
 <a href="#">Tests</a>
 </li>
@@ -74,27 +71,6 @@
 </li>
 </ul>
 <div class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="Successfully add a new time slot for a doctor"></a>
-<h3 class="failures">Successfully add a new time slot for a doctor</h3>
-<span class="code">
-<pre>java.lang.AssertionError: 
-Expected: is &quot;09:00 - 10:00&quot;
-     but: was &quot;08:00 - 17:00&quot;
-
-Expected: is &quot;2025-08-01 - 2025-08-01&quot;
-     but: was &quot;2025-07-14 - 2025-07-16&quot;
-	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
-	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
-	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
-	at co.edu.udea.calidad.citasSalud.stepdefinitions.ScheduleStepDefinitions.theNewScheduleShouldBeVisibleInTheTableFor(ScheduleStepDefinitions.java:77)
-	at ✽.the new schedule should be visible in the table for &quot;Carlos Santana&quot;(file:///home/juancarlos/Documentos/Universidad/2025-1/Calidad_De_Software/Talleres/Taller_Automatizacion_FE/src/test/resources/features/schedule_availability.feature:16)
-</pre>
-</span>
-</div>
-</div>
-<div class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -105,9 +81,9 @@ Expected: is &quot;2025-08-01 - 2025-08-01&quot;
 </tr>
 </thead>
 <tr>
-<td class="failures">Successfully add a new time slot for a doctor</td>
-<td class="failures">3.675s</td>
-<td class="failures">failed</td>
+<td class="success">Successfully add a new time slot for a doctor</td>
+<td class="success">9.486s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -131,20 +107,18 @@ Successfully add a new time slot for a doctor(doctor-s-schedule-availability-man
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-jul 12, 2025 1:15:05 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jul 12, 2025 3:23:43 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-jul 12, 2025 1:15:05 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+jul 12, 2025 3:23:43 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.94. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-[Test worker] ERROR  - ?[91m
-  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
- |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
-   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
 
 Successfully add a new time slot for a doctor
------------------------------------------------------------------------?[0m
-[Test worker] ERROR  - ?[91m    Test failed at step: Then el rango de fechas en la tabla should be '2025-08-01 - 2025-08-01'?[0m
-[Test worker] ERROR  - ?[91m    Expected: is &quot;09:00 - 10:00&quot; but: was &quot;08:00 - 17:00&quot;?[0m
+----------------------------------------------------------------------?[0m
 </pre>
 </span>
 </div>
@@ -156,7 +130,7 @@ Successfully add a new time slot for a doctor
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.13</a> at 12/07/2025, 1:15:08 p. m.</p>
+<a href="https://www.gradle.org">Gradle 8.13</a> at 12/07/2025, 3:23:53 p. m.</p>
 </div>
 </div>
 </body>

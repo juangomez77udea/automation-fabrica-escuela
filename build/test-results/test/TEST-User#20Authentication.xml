@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="User Authentication" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-07-12T18:14:32.379Z" hostname="fedora" time="9.817">
+<testsuite name="User Authentication" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-07-12T20:23:19.375Z" hostname="fedora" time="8.672">
   <properties/>
-  <testcase name="Successful login with valid credentials" classname="User Authentication" time="5.645"/>
-  <testcase name="System rejects invalid credentials #1" classname="User Authentication" time="1.023"/>
-  <testcase name="System rejects invalid credentials #2" classname="User Authentication" time="0.822"/>
-  <testcase name="System rejects invalid credentials #3" classname="User Authentication" time="0.782"/>
-  <testcase name="System rejects invalid credentials #4" classname="User Authentication" time="0.777"/>
-  <testcase name="System rejects invalid credentials #5" classname="User Authentication" time="0.767"/>
+  <testcase name="Successful login with valid credentials" classname="User Authentication" time="4.508"/>
+  <testcase name="System rejects invalid credentials #1" classname="User Authentication" time="0.938"/>
+  <testcase name="System rejects invalid credentials #2" classname="User Authentication" time="0.808"/>
+  <testcase name="System rejects invalid credentials #3" classname="User Authentication" time="0.883"/>
+  <testcase name="System rejects invalid credentials #4" classname="User Authentication" time="0.765"/>
+  <testcase name="System rejects invalid credentials #5" classname="User Authentication" time="0.769"/>
   <system-out><![CDATA[]]>&#x1f510;<![CDATA[ Intentando autenticar a: carlos.santana@example.com
-URL actual en wasSuccessful: http://localhost:3000/horarios
-Login exitoso: true
 ]]>&#x1f510;<![CDATA[ Intentando autenticar a: carlos.santana@example.com
 URL en errorMessage: http://localhost:3000/login
 Texto del modal de error: ¡LOGIN NO VÁLIDO!
@@ -36,9 +34,9 @@ Successful login with valid credentials(user-authentication;successful-login-wit
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-jul 12, 2025 1:14:33 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jul 12, 2025 3:23:20 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-jul 12, 2025 1:14:33 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+jul 12, 2025 3:23:20 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.94. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

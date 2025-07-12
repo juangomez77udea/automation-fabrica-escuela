@@ -1,84 +1,81 @@
 package co.edu.udea.calidad.citasSalud.stepdefinitions;
 
+import co.edu.udea.calidad.citasSalud.questions.TheScheduleData; // Crearemos esta clase
 import co.edu.udea.calidad.citasSalud.tasks.Authenticate;
 import co.edu.udea.calidad.citasSalud.tasks.DefineANew;
 import co.edu.udea.calidad.citasSalud.tasks.OpenThe;
-import co.edu.udea.calidad.citasSalud.userinterfaces.HorariosPage;
 import co.edu.udea.calidad.citasSalud.userinterfaces.LoginPage;
-import io.cucumber.datatable.DataTable;
+import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import java.util.List;
+
+import java.util.Map;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static org.hamcrest.CoreMatchers.is;
-
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class ScheduleStepDefinitions {
 
+    // Esta clase nos permite convertir la tabla del feature en un objeto útil.
+    public static class ScheduleData {
+        private final String startDate;
+        private final String endDate;
+        private final String startTime;
+        private final String endTime;
+
+        public ScheduleData(String startDate, String endDate, String startTime, String endTime) {
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.startTime = startTime;
+            this.endTime = endTime;
+        }
+    }
+
+    @DataTableType
+    public ScheduleData scheduleDataEntry(Map<String, String> entry) {
+        return new ScheduleData(
+                entry.get("StartDate"),
+                entry.get("EndDate"),
+                entry.get("StartTime"),
+                entry.get("EndTime")
+        );
+    }
+
     @Given("the doctor {string} with password {string} is on the schedules page")
-    public void theDoctorWithPasswordIsOnTheSchedulesPage(String email, String password) {
+    public void theDoctorIsOnTheSchedulesPage(String user, String password) {
         OnStage.theActorCalled("Doctor").wasAbleTo(
                 OpenThe.page(LoginPage.class),
-                Authenticate.with(email, password)
+                Authenticate.with(user, password)
         );
+        // Pequeña pausa explícita para asegurar que la redirección se complete.
+        // En un proyecto real, se reemplazaría con un WaitUntil.the(HorariosPage.PAGE_TITLE, isVisible())
+        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+    }
+
+    @When("he adds a new availability for {string} with the following data:")
+    public void heAddsANewAvailabilityForWithTheFollowingData(String doctorName, ScheduleData scheduleData) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(HorariosPage.SCHEDULE_TABLE, isVisible()).forNoMoreThan(15).seconds()
+                DefineANew.scheduleFor(
+                        doctorName,
+                        scheduleData.startDate,
+                        scheduleData.endDate,
+                        scheduleData.startTime,
+                        scheduleData.endTime
+                )
         );
     }
 
-    @When("he clicks on the add schedule button for {string}")
-    public void heClicksOnTheAddScheduleButtonFor(String doctorName) {
-        OnStage.theActorInTheSpotlight().remember("doctorName", doctorName);
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(HorariosPage.ADD_SCHEDULE_BUTTON_FOR_DOCTOR(doctorName), isClickable()).forNoMoreThan(15).seconds(),
-                Click.on(HorariosPage.ADD_SCHEDULE_BUTTON_FOR_DOCTOR(doctorName))
-        );
-    }
-
-    @When("he adds a new availability with the following data:")
-    public void heAddsANewAvailabilityWithTheFollowingData(DataTable dataTable) {
-        String doctorName = OnStage.theActorInTheSpotlight().recall("doctorName");
-
-        List<String> dataRow = dataTable.row(1);
-
-        String startDate = dataRow.get(0);
-        String endDate = dataRow.get(1);
-        String startTime = dataRow.get(2);
-        String endTime = dataRow.get(3);
-
-        // Recordamos los datos para poder usarlos en el 'Then'
-        OnStage.theActorInTheSpotlight().remember("startTime", startTime);
-        OnStage.theActorInTheSpotlight().remember("endTime", endTime);
-        OnStage.theActorInTheSpotlight().remember("startDate", startDate);
-
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                DefineANew.scheduleFor(doctorName, startDate, endDate, startTime, endTime)
-        );
-    }
-
-    @Then("the new schedule should be visible in the table for {string}")
-    public void theNewScheduleShouldBeVisibleInTheTableFor(String doctorName) {
-        // Obtenemos los datos que guardamos en el paso anterior usando 'remember'
-        String expectedStartTime = OnStage.theActorInTheSpotlight().recall("startTime");
-        String expectedEndTime = OnStage.theActorInTheSpotlight().recall("endTime");
-        String expectedDate = OnStage.theActorInTheSpotlight().recall("startDate");
-
-        String expectedSchedule = expectedStartTime + " - " + expectedEndTime;
-        String expectedDateRange = expectedDate + " - " + expectedDate; // Asumiendo que fecha de fin es la misma
+    // Este Then es más específico y robusto
+    @Then("the new schedule from {string} to {string} on {string} should be visible for {string}")
+    public void theNewScheduleShouldBeVisibleInTheTableFor(String startTime, String endTime, String date, String doctorName) {
+        String expectedTimeRange = startTime + " - " + endTime;
+        String expectedDateRange = date + " - " + date;
 
         OnStage.theActorInTheSpotlight().should(
-                seeThat("el horario en la tabla",
-                        Text.of(HorariosPage.SCHEDULE_CELL_FOR_DOCTOR(doctorName)), is(expectedSchedule)),
-                seeThat("el rango de fechas en la tabla",
-                        Text.of(HorariosPage.DATE_RANGE_CELL_FOR_DOCTOR(doctorName)), is(expectedDateRange))
+                seeThat(TheScheduleData.timeFor(doctorName), equalTo(expectedTimeRange)),
+                seeThat(TheScheduleData.dateRangeFor(doctorName), equalTo(expectedDateRange))
         );
     }
 }

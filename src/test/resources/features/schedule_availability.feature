@@ -8,8 +8,7 @@ Feature: Doctor's Schedule Availability Management
 
   Scenario: Successfully add a new time slot for a doctor
     Given the doctor "carlos.santana@example.com" with password "medico1234" is on the schedules page
-    When he clicks on the add schedule button for "Carlos Santana"
-    And he adds a new availability with the following data:
+    When he adds a new availability for "Carlos Santana" with the following data:
       | StartDate  | EndDate    | StartTime | EndTime |
       | 2025-08-01 | 2025-08-01 | 09:00     | 10:00   |
-    Then the new schedule should be visible in the table for "Carlos Santana"
+    Then the new schedule from "09:00" to "10:00" on "2025-08-01" should be visible for "Carlos Santana"
