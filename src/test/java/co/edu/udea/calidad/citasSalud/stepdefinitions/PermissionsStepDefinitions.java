@@ -7,7 +7,6 @@ import co.edu.udea.calidad.citasSalud.userinterfaces.HorariosPage;
 import co.edu.udea.calidad.citasSalud.userinterfaces.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.questions.Visibility;
 
@@ -24,30 +23,22 @@ public class PermissionsStepDefinitions {
                 OpenThe.page(LoginPage.class),
                 Authenticate.with(user, password)
         );
-        // Añadimos una pequeña espera para la redirección.
         try { Thread.sleep(2000); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
     }
 
-    // Este paso ya no es necesario, lo eliminamos. La lógica se mueve al Then.
-    // @When("he is on the schedules page")
-    // public void heIsOnTheSchedulesPage() { ... }
-
-    // ESTE ES EL NUEVO Y ÚNICO PASO 'THEN'
     @Then("^he (should|should not) see the modification options in the schedule table$")
     public void heShouldSeeTheModificationOptionsInTheScheduleTable(String visibility) {
         boolean shouldBeVisible = "should".equals(visibility);
 
         if (shouldBeVisible) {
-            // Para el rol autorizado, verificamos que el login fue exitoso Y que ve la columna
             OnStage.theActorInTheSpotlight().should(
                     seeThat(TheLoginResult.wasSuccessful(), is(true)),
                     seeThat(Visibility.of(HorariosPage.ACTIONS_COLUMN_HEADER), is(true))
             );
         } else {
-            // Para el rol NO autorizado, verificamos que el login falló Y que sigue en la página de login.
             OnStage.theActorInTheSpotlight().should(
                     seeThat(TheLoginResult.wasSuccessful(), is(false)),
-                    seeThat(the(LoginPage.LOGIN_BUTTON), isVisible()) // Esta es la verificación correcta
+                    seeThat(the(LoginPage.LOGIN_BUTTON), isVisible())
             );
         }
     }

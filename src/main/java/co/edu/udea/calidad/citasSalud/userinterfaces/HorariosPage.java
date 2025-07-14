@@ -79,8 +79,8 @@ public class HorariosPage {
 
     /**
      * Localiza la celda de 'Días' para un doctor específico.
-     * El índice [5] corresponde a la 5ª columna (td) de la fila (tr).
      */
+
     public static Target DAYS_CELL_FOR_DOCTOR(String doctorName) {
         return Target.the("celda de Días para " + doctorName)
                 .located(By.xpath(String.format("//tr[td[normalize-space()='%s']]//td[5]", doctorName)));
@@ -88,7 +88,6 @@ public class HorariosPage {
 
     /**
      * Localiza la celda de 'Horario' para un doctor específico.
-     * El índice [6] corresponde a la 6ª columna.
      */
     public static Target SCHEDULE_CELL_FOR_DOCTOR(String doctorName) {
         return Target.the("celda de Horario para " + doctorName)
@@ -97,7 +96,6 @@ public class HorariosPage {
 
     /**
      * Localiza la celda de 'Rango Fechas' para un doctor específico.
-     * El índice [7] corresponde a la 7ª columna.
      */
     public static Target DATE_RANGE_CELL_FOR_DOCTOR(String doctorName) {
         return Target.the("celda de Rango de Fechas para " + doctorName)

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Doctor's Schedule Availability Management" skipped="0" tests="1" time="1.12" timestamp="2025-07-12 03:23:43"><testcase name="Successfully add a new time slot for a doctor"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Doctor's Schedule Availability Management" skipped="0" tests="1" time="1.23" timestamp="2025-07-13 07:34:42"><testcase name="Successfully add a new time slot for a doctor"/></testsuite>

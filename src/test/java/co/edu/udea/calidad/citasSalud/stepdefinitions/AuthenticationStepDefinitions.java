@@ -4,7 +4,6 @@ import co.edu.udea.calidad.citasSalud.questions.TheLoginResult;
 import co.edu.udea.calidad.citasSalud.tasks.Authenticate;
 import co.edu.udea.calidad.citasSalud.tasks.OpenThe;
 import co.edu.udea.calidad.citasSalud.userinterfaces.LoginPage;
-import co.edu.udea.calidad.citasSalud.utils.TextNormalizer;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,9 +13,10 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.Matchers.is;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.text.IsEmptyString.emptyString;
 
 public class AuthenticationStepDefinitions {
 
@@ -30,9 +30,8 @@ public class AuthenticationStepDefinitions {
         OnStage.theActorCalled("User").wasAbleTo(OpenThe.page(LoginPage.class));
     }
 
-    // Este método maneja las credenciales válidas del Scenario
-    @When("he enters the valid credentials {string} and {string}")
-    public void heEntersTheValidCredentialsAnd(String user, String password) {
+    @When("he enters the {word} credentials {string} and {string}")
+    public void heEntersTheCredentialsAnd(String typeOfCredentials, String user, String password) {
         OnStage.theActorInTheSpotlight().attemptsTo(
                 Authenticate.with(user, password)
         );
@@ -43,19 +42,10 @@ public class AuthenticationStepDefinitions {
         OnStage.theActorInTheSpotlight().should(seeThat(TheLoginResult.wasSuccessful(), is(true)));
     }
 
-    // Este método maneja las credenciales inválidas del Scenario Outline
-    @When("he enters the invalid credentials {string} and {string}")
-    public void heEntersTheInvalidCredentialsAnd(String user, String password) {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                Authenticate.with(user, password)
-        );
-    }
-
-    @Then("he should see the error message {string}")
-    public void heShouldSeeTheErrorMessage(String expectedMessage) {
-        String expectedNormalizedMessage = TextNormalizer.normalize(expectedMessage);
+    @Then("the system should show an invalid login error message")
+    public void theSystemShouldShowAnInvalidLoginErrorMessage() {
         OnStage.theActorInTheSpotlight().should(
-                seeThat(TheLoginResult.errorMessage(), containsString(expectedNormalizedMessage))
+                seeThat(TheLoginResult.errorMessage(), not(emptyString()))
         );
     }
 

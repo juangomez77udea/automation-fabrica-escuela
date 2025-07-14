@@ -24,7 +24,7 @@ public class Authenticate implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        System.out.println("Intentando autenticar a: " + (user.isEmpty() ? "[usuario vacío]" : user));
+       // System.out.println("Intentando autenticar a: " + (user.isEmpty() ? "[usuario vacío]" : user));
 
         actor.attemptsTo(
                 Enter.theValue(user).into(LoginPage.USERNAME_FIELD),

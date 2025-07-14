@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Role-based Access Control" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-12T20:23:28.049Z" hostname="fedora" time="15.081">
+<testsuite name="Role-based Access Control" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-07-14T00:34:27.228Z" hostname="fedora" time="15.137">
   <properties/>
-  <testcase name="Verify visibility of schedule management options by role #1" classname="Role-based Access Control" time="5.738"/>
-  <testcase name="Verify visibility of schedule management options by role #2" classname="Role-based Access Control" time="4.663"/>
-  <testcase name="Verify visibility of schedule management options by role #3" classname="Role-based Access Control" time="4.68"/>
-  <system-out><![CDATA[]]>&#x1f510;<![CDATA[ Intentando autenticar a: carlos.santana@example.com
-]]>&#x1f510;<![CDATA[ Intentando autenticar a: juan@mail.com
-]]>&#x1f510;<![CDATA[ Intentando autenticar a: pepo@mail.com
-]]></system-out>
+  <testcase name="Verify visibility of schedule management options by role #1" classname="Role-based Access Control" time="5.776"/>
+  <testcase name="Verify visibility of schedule management options by role #2" classname="Role-based Access Control" time="4.706"/>
+  <testcase name="Verify visibility of schedule management options by role #3" classname="Role-based Access Control" time="4.655"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
@@ -18,9 +15,9 @@ Verify visibility of schedule management options by role(role-based-access-contr
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-jul 12, 2025 3:23:28 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jul 13, 2025 7:34:27 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 138
-jul 12, 2025 3:23:28 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+jul 13, 2025 7:34:27 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 138.0.7204.94. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  

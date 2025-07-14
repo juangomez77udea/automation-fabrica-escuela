@@ -8,9 +8,8 @@ import net.serenitybdd.screenplay.targets.Target;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 /**
- * Esta Interaction se especializa en ingresar una fecha en un campo de tipo 'date'.
+ * Esta Interaction se ingresa una fecha en un campo de tipo 'date'.
  * Abstrae la complejidad de formatear la fecha (ej. "DDMMAAAA")
- * para que la Task no necesite conocer este detalle técnico.
  */
 public class EnterDate implements Interaction {
 
@@ -23,7 +22,7 @@ public class EnterDate implements Interaction {
     }
 
     public static EnterDate of(String date) {
-        // Devuelve una instancia "parcialmente construida" que espera el target
+        // Devuelve una instancia que espera el target
         return new EnterDate(date, null);
     }
 

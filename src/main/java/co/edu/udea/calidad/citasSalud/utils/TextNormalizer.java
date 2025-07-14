@@ -4,7 +4,7 @@ import java.text.Normalizer;
 
 public class TextNormalizer {
 
-    private TextNormalizer() {} // Clase de utilidad, no instanciable
+    private TextNormalizer() {}
 
     public static String normalize(String input) {
         if (input == null) {
@@ -12,7 +12,7 @@ public class TextNormalizer {
         }
 
         String text = input.toLowerCase();
-        // Quitar tildes y diacríticos
+        // Quitar tildes y signos de puntuación
         text = Normalizer.normalize(text, Normalizer.Form.NFD);
         text = text.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
         // Quitar signos de puntuación

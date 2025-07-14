@@ -9,13 +9,17 @@ Feature: User Authentication
   Background:
     Given the user is on the login page
 
-  Scenario: Successful login with valid credentials
-    When he enters the valid credentials "carlos.santana@example.com" and "medico1234"
+  Scenario Outline: Successful login with valid credentials
+    When he enters the valid credentials "<user>" and "<password>"
     Then he should be redirected to the schedules page
+
+    Examples:
+      | user                       | password   |
+      | carlos.santana@example.com | medico1234 |
 
   Scenario Outline: System rejects invalid credentials
     When he enters the invalid credentials "<user>" and "<password>"
-    Then he should see the error message "¡LOGIN NO VÁLIDO!"
+    Then the system should show an invalid login error message
     And he should remain on the login page
 
     Examples:

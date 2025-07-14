@@ -1,6 +1,6 @@
 package co.edu.udea.calidad.citasSalud.stepdefinitions;
 
-import co.edu.udea.calidad.citasSalud.questions.TheScheduleData; // Crearemos esta clase
+import co.edu.udea.calidad.citasSalud.questions.TheScheduleData;
 import co.edu.udea.calidad.citasSalud.tasks.Authenticate;
 import co.edu.udea.calidad.citasSalud.tasks.DefineANew;
 import co.edu.udea.calidad.citasSalud.tasks.OpenThe;
@@ -18,7 +18,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class ScheduleStepDefinitions {
 
-    // Esta clase nos permite convertir la tabla del feature en un objeto útil.
     public static class ScheduleData {
         private final String startDate;
         private final String endDate;
@@ -50,7 +49,6 @@ public class ScheduleStepDefinitions {
                 Authenticate.with(user, password)
         );
         // Pequeña pausa explícita para asegurar que la redirección se complete.
-        // En un proyecto real, se reemplazaría con un WaitUntil.the(HorariosPage.PAGE_TITLE, isVisible())
         try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
@@ -67,7 +65,6 @@ public class ScheduleStepDefinitions {
         );
     }
 
-    // Este Then es más específico y robusto
     @Then("the new schedule from {string} to {string} on {string} should be visible for {string}")
     public void theNewScheduleShouldBeVisibleInTheTableFor(String startTime, String endTime, String date, String doctorName) {
         String expectedTimeRange = startTime + " - " + endTime;
